@@ -26,10 +26,10 @@ public class VisAPIDemo {
      */
     public static void get_visitor_sync_listVis(String token){
         String url ="/device/get_visitor_sync_list";//设置API的相对url
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("syncStatus",1);
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 添加来访信息
@@ -38,7 +38,7 @@ public class VisAPIDemo {
     public static void create_appointmentVis(String token){
 
         String url ="/vis/create_appointment";//设置API的相对url
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("memberMobile","36477777777");
         reqMap.put("visitorMobile","36477777777");
@@ -56,6 +56,6 @@ public class VisAPIDemo {
         reqMap.put("memo","参观新辰海科技");
         //reqMap.put("meetingRoomName","会议室1");
 
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
 }

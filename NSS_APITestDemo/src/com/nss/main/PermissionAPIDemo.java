@@ -58,11 +58,11 @@ public class PermissionAPIDemo {
     public static void bind_devicesPermission(String token,String groupId,List<String> deviceIdList){
         Result bind_devicesResult = new Result();//API的返回结果
         String url ="/permission/bind_devices";//设置API的相对url
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("groupId",groupId);
         reqMap.put("deviceIdList",deviceIdList);
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 设置分组权限（移除设备到分组）
@@ -73,11 +73,11 @@ public class PermissionAPIDemo {
     public static void unbind_devicesPermission(String token,String groupId,List<String> deviceIdList){
         Result bind_devicesResult = new Result();//API的返回结果
         String url ="/permission/unbind_devices";//设置API的相对url
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("groupId",groupId);
         reqMap.put("deviceIdList",deviceIdList);
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 设置设备权限（添加分组到设备）
@@ -88,11 +88,11 @@ public class PermissionAPIDemo {
     public static void bind_groupsPermission(String token,String deviceId,List<String> groupIdList){
         Result bind_devicesResult = new Result();//API的返回结果
         String url ="/permission/bind_groups";//设置API的相对url
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("deviceId",deviceId);
         reqMap.put("groupIdList",groupIdList);
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 设置设备权限（移除分组到设备）
@@ -103,11 +103,11 @@ public class PermissionAPIDemo {
     public static void unbind_groupsPermission(String token,String deviceId,List<String> groupIdList){
         Result bind_devicesResult = new Result();//API的返回结果
         String url ="/permission/unbind_groups";//设置API的相对url
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("deviceId",deviceId);
         reqMap.put("groupIdList",groupIdList);
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
 
 }

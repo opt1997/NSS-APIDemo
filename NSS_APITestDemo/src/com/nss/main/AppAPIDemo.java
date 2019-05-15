@@ -10,8 +10,8 @@ import java.util.Map;
 public class AppAPIDemo {
     public static String token = null;
     public static void main(String[] args) {
-        System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
-        token = TakeTokenUtil.getToken("46d44df3", "a7316346-12c8-46a5-b535-ab0409c20620");
+        /*System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
+        token = TakeTokenUtil.getToken("46d44df3", "a7316346-12c8-46a5-b535-ab0409c20620");*/
        /* remote_open_gateAPP(token);
         update_short_numAPP(token,"339","15915951599","qaq","1935");
         video_platform_login_statusAPP(token);

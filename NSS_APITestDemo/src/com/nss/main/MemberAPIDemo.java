@@ -76,12 +76,12 @@ public class MemberAPIDemo {
     public static void unbind_devicesMember(String token, List<String> memberIDList,List<String> deviceIdList) {
         String url ="/member/unbind_devices";
 
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("memberIdList",memberIDList);
         reqMap.put("deviceIdList",deviceIdList);
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 人员绑定至设备
@@ -91,12 +91,12 @@ public class MemberAPIDemo {
      */
     public static void bind_devicesMember(String token, List<String> memberIDList,List<String> deviceIdList) {
         String url ="/member/bind_devices";
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("memberIdList",memberIDList);
         reqMap.put("deviceIdList",deviceIdList);
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 添加人员
@@ -109,14 +109,14 @@ public class MemberAPIDemo {
         List<String> tagNameList = new ArrayList<>();//存放tag
         tagNameList.add("1");
         tagNameList.add("2");
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("memberId",""+tempId);
         reqMap.put("memberName","group"+tempId++);
         reqMap.put("tagName",tagNameList);
         reqMap.put("mobile",tempId+"77777777");
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
-        createMemberResult = SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        createMemberResult = SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
         if(createMemberResult.getData()!=null){
             return createMemberResult.getData().getMemberId();
         }
@@ -131,7 +131,7 @@ public class MemberAPIDemo {
     public static void updateMember(String token, String memberID) {
         String url ="/member/update";
 
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("memberId",""+memberID);
         reqMap.put("memberName","group"+Integer.valueOf(memberID)*2);
@@ -140,7 +140,7 @@ public class MemberAPIDemo {
         tagNameList.add("4");
         reqMap.put("tagName",tagNameList);
         //把请求发送给服务器，执行结果打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 这里的fileId需要通过在网页上上传文件才能获得文件的id
@@ -151,7 +151,7 @@ public class MemberAPIDemo {
     public static void batchMember(String token,String fileId) {
         String url ="/member/batch";
 
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("imageZipFileId",fileId);
         List<String> tagNameList = new ArrayList<>();//存放tag
@@ -159,7 +159,7 @@ public class MemberAPIDemo {
         tagNameList.add("2");
         reqMap.put("tagName",tagNameList);
         //把请求发送给服务器，执行结果打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 删除人员组
@@ -170,11 +170,11 @@ public class MemberAPIDemo {
     public static void deleteMember(String token,List<String> memberIDList) {
         String url ="/member/delete";
 
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("memberIdList",memberIDList);
         //把请求发送给服务器，执行结果打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 增加人员分组
@@ -185,12 +185,12 @@ public class MemberAPIDemo {
     public static void bind_groupMember(String token, List<String> memberIDList) {
         String url ="/member/bind_group";
 
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("memberIdList",memberIDList);
         reqMap.put("groupId","100");
         //把请求发送给服务器，执行结果打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 逻辑删除所有人员
@@ -200,11 +200,11 @@ public class MemberAPIDemo {
     public static void delete_allMember(String token) {
         String url ="/member/delete_all";
 
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
 
         //把请求发送给服务器，执行结果打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 移除人员分组
@@ -215,12 +215,12 @@ public class MemberAPIDemo {
     public static void unbind_groupMember(String token , List<String> memberIDList) {
         String url ="/member/unbind_group";
 
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("memberIdList",memberIDList);
         reqMap.put("groupId","100");
         //把请求发送给服务器，执行结果打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 增加/删除人员分组（通过标签）
@@ -231,13 +231,13 @@ public class MemberAPIDemo {
     public static void bind_group_by_tagMember(String token, List<String> memberIDList) {
         String url ="/member/bind_group_by_tag";
 
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("tagIdList",memberIDList);
         reqMap.put("groupId","100");
         reqMap.put("optionFlag","1");
         //把请求发送给服务器，结果打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
     /**
      * @description 获取人员下发状态
@@ -248,21 +248,21 @@ public class MemberAPIDemo {
     public static void get_device_member_statusMember(String token,String deviceCode) {
         String url ="/member/get_device_member_status";
 
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("deviceCode",deviceCode);
         //把请求发送给服务器，结果打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
 
     public static void delete_by_searchMember(String token) {
         String url ="/member/delete_by_search";
 
-        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
 
         //把请求发送给服务器，执行结果打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
 
 }

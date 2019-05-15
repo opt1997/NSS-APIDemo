@@ -269,7 +269,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-67" />
     <option name="y" value="41" />
     <option name="width" value="1400" />
@@ -322,6 +322,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../springdemo (2)" />
@@ -350,7 +351,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CallbackAPIDemo">
+  <component name="RunManager" selected="Application.DeviceAPIDemo">
     <configuration name="AppAPIDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.nss.main.AppAPIDemo" />
       <module name="NSS_APITestDemo" />
@@ -497,17 +498,17 @@
     </configuration>
     <list>
       <item itemvalue="Application.NSS_APITestDemo" />
-      <item itemvalue="Tomcat Server.NSS_APITestDemo_Tomcat" />
       <item itemvalue="Application.DeviceAPIDemo" />
       <item itemvalue="Application.AppAPIDemo" />
       <item itemvalue="Application.NoticeAPIDemo" />
       <item itemvalue="Application.ParkingAPIDemo" />
       <item itemvalue="Application.CallbackAPIDemo" />
+      <item itemvalue="Tomcat Server.NSS_APITestDemo_Tomcat" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CallbackAPIDemo" />
         <item itemvalue="Application.DeviceAPIDemo" />
+        <item itemvalue="Application.CallbackAPIDemo" />
         <item itemvalue="Application.ParkingAPIDemo" />
         <item itemvalue="Application.NoticeAPIDemo" />
         <item itemvalue="Application.AppAPIDemo" />
