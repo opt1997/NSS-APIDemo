@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="NSS_APITestDemo">
+    <output-path>$PROJECT_DIR$/out/artifacts/NSS_APITestDemo</output-path>
+    <root id="root" />
+  </artifact>
+</component>
