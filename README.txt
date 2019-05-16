@@ -2,8 +2,12 @@
 
 项目主要结构及作用:
     main-->
-         --APITestDemo
-
+         --CallbackAPIDemo
+	 --DeviceAPIDemo
+	 --GroupAPIDemo
+	 --MemberAPIDemo
+	 --PermissionAPIDemo
+	 --VisAPIDemo
     pojo-->
          --Data
          --Result
