@@ -1,12 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.js">
+    </script>
     <script type="application/javascript">
-
         $(function () {
            // alert('这里是人脸照片上传');
-            var token = $("#div0").innerText;
+            var token = $("#token").val();
+            //document.getElementById("div1").append(token) ;
             $('#btn').click(function () {
                 var formData = new FormData($( "#upload-form" )[0]);
                 console.log(formData);
@@ -24,13 +25,17 @@
                         withCredentials: true
                     },
                     success:function (data) {
-                        alert(data);
+                        var item = eval(data);
+                       /* for (var i in item) {
+                            if(item[i]=="[object Object]") {
+                                alert("文件id是：\n" + item[i].fileId);
+                                document.getElementById("div1").append("文件id是：\n" + item[i].fileId);
+                            }
+                        }*/
                     },
                     error:function () {
-
                     }
                 });
-
             });
         });
     </script>
@@ -42,10 +47,16 @@
         <%= session.getAttribute("token") %>
     </div>
     <br>
+    <%
+       String s1 = session.getAttribute("token").toString();
+    %>
     <form id="upload-form" enctype="multipart/form-data">
         <input name="updateFile" id="updateFile" type="file" />
-        <input type="button" id="btn" value="上传">
+        <input id="token" name="token" type= "hidden" value= <%=s1%> />
+        <input type="button" id="btn" value="上传" />
     </form>
+    <div id="div1">
 
+    </div>
 </body>
 </html>
