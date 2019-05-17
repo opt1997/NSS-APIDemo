@@ -30,6 +30,5 @@ public class IndexController {
     public String index2(HttpServletRequest req, HttpServletResponse resp) {
         req.getSession().setAttribute("token",req.getParameter("token"));
         return "index2";
-
     }
 }
