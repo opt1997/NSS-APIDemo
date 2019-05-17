@@ -14,9 +14,8 @@ public class VisAPIDemo {
         System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
         token = TakeTokenUtil.getToken("46d44df3", "a7316346-12c8-46a5-b535-ab0409c20620");
         //token = TakeTokenUtil.getToken("8cafd773", "6ef3dea8-e422-4ccb-af1d-97c9be6aaf27 ");
-        get_visitor_sync_listVis(token);
-      //  MemberAPIDemo.createMember(token);
-        create_appointmentVis(token);
+        get_visitor_sync_listVis(token);//访客下发记录查询
+        create_appointmentVis(token);//添加来访信息
 
     }
 

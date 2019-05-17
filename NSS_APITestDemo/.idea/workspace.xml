@@ -62,7 +62,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nss/main/GroupAPIDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
+            <state relative-caret-position="567">
               <caret line="110" column="2" selection-start-line="110" selection-start-column="2" selection-end-line="110" selection-end-column="2" />
               <folding>
                 <element signature="method#main#0;class#GroupAPIDemo#0" />
@@ -145,13 +145,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nss/main/VisAPIDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="223">
+              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
               <folding>
-                <element signature="method#main#0;class#VisAPIDemo#0" />
                 <element signature="docComment;method#get_visitor_sync_listVis#0;class#VisAPIDemo#0" />
                 <element signature="method#get_visitor_sync_listVis#0;class#VisAPIDemo#0" />
                 <element signature="docComment;method#create_appointmentVis#0;class#VisAPIDemo#0" />
@@ -186,13 +185,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/nss/main/PermissionAPIDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="67" column="3" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="3" />
+            <state relative-caret-position="197">
+              <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
               <folding>
-                <element signature="method#main#0;class#PermissionAPIDemo#0" />
                 <element signature="docComment;method#bind_devicesPermission#0;class#PermissionAPIDemo#0" />
                 <element signature="method#bind_devicesPermission#0;class#PermissionAPIDemo#0" />
                 <element signature="docComment;method#unbind_devicesPermission#0;class#PermissionAPIDemo#0" />
@@ -209,7 +207,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nss/main/MemberAPIDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-155">
+            <state relative-caret-position="783">
               <caret line="189" column="7" lean-forward="true" selection-start-line="189" selection-start-column="7" selection-end-line="189" selection-end-column="7" />
               <folding>
                 <element signature="method#main#0;class#MemberAPIDemo#0" />
@@ -290,8 +288,8 @@
         <option value="$PROJECT_DIR$/src/com/nss/main/CallbackAPIDemo.java" />
         <option value="$PROJECT_DIR$/src/com/nss/main/DeviceAPIDemo.java" />
         <option value="$PROJECT_DIR$/src/com/nss/main/MemberAPIDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/nss/main/PermissionAPIDemo.java" />
         <option value="$PROJECT_DIR$/src/com/nss/main/VisAPIDemo.java" />
+        <option value="$PROJECT_DIR$/src/com/nss/main/PermissionAPIDemo.java" />
       </list>
     </option>
   </component>
@@ -307,8 +305,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="128" />
-    <option name="y" value="62" />
+    <option name="x" value="154" />
+    <option name="y" value="64" />
     <option name="width" value="1400" />
     <option name="height" value="820" />
   </component>
@@ -587,12 +585,12 @@
       <workItem from="1557223657402" duration="692000" />
       <workItem from="1557708112683" duration="10681000" />
       <workItem from="1557795871535" duration="43377000" />
-      <workItem from="1557974694529" duration="29809000" />
+      <workItem from="1557974694529" duration="32387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189078000" />
+    <option name="totallyTimeSpent" value="191656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -940,22 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nss/main/CallbackAPIDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
-          <folding>
-            <element signature="method#main#0;class#CallbackAPIDemo#0" />
-            <element signature="docComment;method#createCallback#0;class#CallbackAPIDemo#0" />
-            <element signature="method#createCallback#0;class#CallbackAPIDemo#0" />
-            <element signature="docComment;method#updateCallback#0;class#CallbackAPIDemo#0" />
-            <element signature="method#updateCallback#0;class#CallbackAPIDemo#0" />
-            <element signature="docComment;method#deleteCallback#0;class#CallbackAPIDemo#0" />
-            <element signature="method#deleteCallback#0;class#CallbackAPIDemo#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nss/main/DeviceAPIDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-87">
@@ -984,9 +966,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nss/main/CallbackAPIDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+          <folding>
+            <element signature="method#main#0;class#CallbackAPIDemo#0" />
+            <element signature="docComment;method#createCallback#0;class#CallbackAPIDemo#0" />
+            <element signature="method#createCallback#0;class#CallbackAPIDemo#0" />
+            <element signature="docComment;method#updateCallback#0;class#CallbackAPIDemo#0" />
+            <element signature="method#updateCallback#0;class#CallbackAPIDemo#0" />
+            <element signature="docComment;method#deleteCallback#0;class#CallbackAPIDemo#0" />
+            <element signature="method#deleteCallback#0;class#CallbackAPIDemo#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nss/main/GroupAPIDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="567">
           <caret line="110" column="2" selection-start-line="110" selection-start-column="2" selection-end-line="110" selection-end-column="2" />
           <folding>
             <element signature="method#main#0;class#GroupAPIDemo#0" />
@@ -1005,7 +1003,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nss/main/MemberAPIDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
+        <state relative-caret-position="783">
           <caret line="189" column="7" lean-forward="true" selection-start-line="189" selection-start-column="7" selection-end-line="189" selection-end-column="7" />
           <folding>
             <element signature="method#main#0;class#MemberAPIDemo#0" />
@@ -1036,12 +1034,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nss/main/VisAPIDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+          <folding>
+            <element signature="docComment;method#get_visitor_sync_listVis#0;class#VisAPIDemo#0" />
+            <element signature="method#get_visitor_sync_listVis#0;class#VisAPIDemo#0" />
+            <element signature="docComment;method#create_appointmentVis#0;class#VisAPIDemo#0" />
+            <element signature="method#create_appointmentVis#0;class#VisAPIDemo#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nss/main/PermissionAPIDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="67" column="3" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="3" />
+        <state relative-caret-position="197">
+          <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
           <folding>
-            <element signature="method#main#0;class#PermissionAPIDemo#0" />
             <element signature="docComment;method#bind_devicesPermission#0;class#PermissionAPIDemo#0" />
             <element signature="method#bind_devicesPermission#0;class#PermissionAPIDemo#0" />
             <element signature="docComment;method#unbind_devicesPermission#0;class#PermissionAPIDemo#0" />
@@ -1050,20 +1060,6 @@
             <element signature="method#bind_groupsPermission#0;class#PermissionAPIDemo#0" />
             <element signature="docComment;method#unbind_groupsPermission#0;class#PermissionAPIDemo#0" />
             <element signature="method#unbind_groupsPermission#0;class#PermissionAPIDemo#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nss/main/VisAPIDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="method#main#0;class#VisAPIDemo#0" />
-            <element signature="docComment;method#get_visitor_sync_listVis#0;class#VisAPIDemo#0" />
-            <element signature="method#get_visitor_sync_listVis#0;class#VisAPIDemo#0" />
-            <element signature="docComment;method#create_appointmentVis#0;class#VisAPIDemo#0" />
-            <element signature="method#create_appointmentVis#0;class#VisAPIDemo#0" />
           </folding>
         </state>
       </provider>

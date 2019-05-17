@@ -43,10 +43,10 @@ public class PermissionAPIDemo {
         groupIdList.add(GroupAPIDemo.createGroup(token));
         List<String> deviceIdList = new ArrayList<>();
         deviceIdList.add(DeviceAPIDemo.createDevice(token));
-        bind_devicesPermission(token,groupId,deviceIdList);
-        bind_groupsPermission(token,deviceId,groupIdList);
-        unbind_devicesPermission(token,groupId,deviceIdList);
-        unbind_groupsPermission(token,deviceId,groupIdList);
+        bind_devicesPermission(token,groupId,deviceIdList);//设置分组权限（添加设备到分组）
+        bind_groupsPermission(token,deviceId,groupIdList);//设置分组权限（添加分组到设备）
+        unbind_devicesPermission(token,groupId,deviceIdList);//设置分组权限（移除设备到分组）
+        unbind_groupsPermission(token,deviceId,groupIdList);//设置分组权限（移除分组到设备）
     }
 
     /**

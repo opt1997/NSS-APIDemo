@@ -17,22 +17,22 @@ public class DeviceAPIDemo {
     public static void main(String[] args) {
         System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
         token = TakeTokenUtil.getToken("46d44df3", "a7316346-12c8-46a5-b535-ab0409c20620");
-        String deviceId1 = createDevice(token);
+        String deviceId1 = createDevice(token);//创建设备
         List<String> deviceIdList1 = new ArrayList<String>();
         deviceIdList1.add(deviceId1);
-        remote_ctrlDevice(token,deviceId1);
-        get_remote_ctrl_resultDevice(token,deviceId1);
-        updateDevice(token,deviceId1);
-        update_confDevice(token,deviceId1);
-        deleteDevice(token,deviceIdList1);
+        remote_ctrlDevice(token,deviceId1);//远程控制设备
+        get_remote_ctrl_resultDevice(token,deviceId1);//获取设备配置（含配置分类信息）
+        updateDevice(token,deviceId1);//更新设备
+        update_confDevice(token,deviceId1);//设备上传配置信息
+        deleteDevice(token,deviceIdList1);//删除设备
         //以下接口使用172.16.127.188:8088服务器
         token1 = TakeTokenUtil.getToken1("86e2ceaf", "33c59981-cf6b-4693-9078-8ae233071e69");//获取token
         String deviceId ="2c90ff3c6abfef01016abff34630003d";
         List<String> deviceIdList = new ArrayList<String>();
         deviceIdList.add(deviceId);
-        fetch_confDevice(token1,deviceId,orgId);
-        set_device_access_passwdDevice(token1,deviceIdList);
-        get_device_conf_listDevice(token1,deviceId);
+        fetch_confDevice(token1,deviceId,orgId);//设备配置获取(设备用，无配置分类信息)
+        set_device_access_passwdDevice(token1,deviceIdList);//get_device_conf_listDevice
+        get_device_conf_listDevice(token1,deviceId);//修改设备固定密码
     }
 
     /**
