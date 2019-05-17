@@ -1,4 +1,5 @@
 package com.nss.utils;
+
 import com.alibaba.fastjson.JSON;
 import com.nss.pojo.Result;
 import net.sf.json.JSONObject;
@@ -11,6 +12,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
+import org.apache.poi.util.SystemOutLogger;
 
 import java.io.IOException;
 import java.util.Map;
@@ -43,7 +45,7 @@ public class PostSendUtil {
             response = httpClient.execute(httpPost);
             // 从响应模型中获取响应实体
             HttpEntity responseEntity = response.getEntity();
-            //ystem.out.println(response.getStatusLine().getStatusCode());
+            //system.out.println(response.getStatusLine().getStatusCode());
             if(response.getStatusLine().getStatusCode()!=200){
                 System.out.println("错误代码："+response.getStatusLine().getStatusCode());
                 return null;

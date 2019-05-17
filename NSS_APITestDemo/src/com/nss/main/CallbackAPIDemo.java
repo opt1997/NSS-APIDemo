@@ -22,9 +22,9 @@ public class CallbackAPIDemo {
         System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
         //token = TakeTokenUtil.getToken("46d44df3", "a7316346-12c8-46a5-b535-ab0409c20620");
         token = "d48db8fb-2eef-44cb-8203-136c8cced949";
-        createCallback(token);
-        updateCallback(token);
-        deleteCallback(token);
+        createCallback(token);//创建回调
+        updateCallback(token);//更新回调
+        deleteCallback(token);//删除回调
     }
 
     /**
@@ -39,6 +39,7 @@ public class CallbackAPIDemo {
         reqMap.put("callbackTag",13);
         SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
     }
+
     /**
      * @description 更新回调
      * @param token
@@ -51,6 +52,7 @@ public class CallbackAPIDemo {
         reqMap.put("callbackTag",13);
         SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
     }
+
     /**
      * @description 删除回调
      * @param token

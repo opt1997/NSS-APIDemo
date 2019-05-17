@@ -10,29 +10,29 @@ import java.util.Map;
 
 public class DeviceAPIDemo {
     public static String token = null;
+    public static String token1 = null;
     public static String orgId = "";
-    public static int tempId = 299;
+    public static int tempId = 300;
+
     public static void main(String[] args) {
         System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
-        token = TakeTokenUtil.getToken("46d44df3", "a7316346-12c8-46a5-b535-ab0409c20620");//获取token
-        String deviceId ="ff8081816a38f6b4016ab907cabb430c";
-       /* String deviceId = createDevice(token);
-        System.out.println(deviceId);*/
+        token = TakeTokenUtil.getToken("46d44df3", "a7316346-12c8-46a5-b535-ab0409c20620");
+        String deviceId1 = createDevice(token);
+        List<String> deviceIdList1 = new ArrayList<String>();
+        deviceIdList1.add(deviceId1);
+        remote_ctrlDevice(token,deviceId1);
+        get_remote_ctrl_resultDevice(token,deviceId1);
+        updateDevice(token,deviceId1);
+        update_confDevice(token,deviceId1);
+        deleteDevice(token,deviceIdList1);
+        //以下接口使用172.16.127.188:8088服务器
+        token1 = TakeTokenUtil.getToken1("86e2ceaf", "33c59981-cf6b-4693-9078-8ae233071e69");//获取token
+        String deviceId ="2c90ff3c6abfef01016abff34630003d";
         List<String> deviceIdList = new ArrayList<String>();
         deviceIdList.add(deviceId);
-
-       /* String memberId = MemberAPIDemo.createMember(token);
-        List<String> memberIdList = new ArrayList<String>();
-        memberIdList.add(memberId);
-        MemberAPIDemo.bind_devicesMember(token,memberIdList,deviceIdList);*/
-
-        update_confDevice(token,deviceId);fetch_confDevice(token,deviceId,orgId);
-        get_device_conf_listDevice(token,deviceId);
-
-       // remote_ctrlDevice(token,deviceId);
-       // get_remote_ctrl_resultDevice(token,deviceId);
-        set_device_access_passwdDevice(token,deviceIdList);
-       // deleteDevice(token,deviceIdList);
+        fetch_confDevice(token1,deviceId,orgId);
+        set_device_access_passwdDevice(token1,deviceIdList);
+        get_device_conf_listDevice(token1,deviceId);
     }
 
     /**
@@ -63,6 +63,7 @@ public class DeviceAPIDemo {
         return result.getData().getDeviceId();
 
     }
+
     /**
      * @description 更新设备
      * @param token
@@ -80,6 +81,7 @@ public class DeviceAPIDemo {
         SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
 
     }
+
     /**
      * @description 删除设备
      * @param token
@@ -95,24 +97,37 @@ public class DeviceAPIDemo {
         SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
 
+    /**
+     * @description 设备配置获取(设备用，无配置分类信息)
+     * @param token
+     * @param deviceId
+     * @param orgId
+     */
     public static void fetch_confDevice(String token,String deviceId,String orgId){
         String url ="/device/fetch_conf";
 
         Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
-      //  headerMap.put("orgId",orgId);
+        //  headerMap.put("orgId",orgId);
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("deviceId",deviceId);
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
+        SendAPIUtil.sendAPI1(url,reqMap,headerMap,token);
     }
+
+    /**
+     * @description 获取设备配置（含配置分类信息）
+     * @param token
+     * @param deviceId
+     */
     public static void get_device_conf_listDevice(String token,String deviceId){
         String url ="/device/get_device_conf_list";
         Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>();//创建请求参数map
         reqMap.put("deviceId",deviceId);
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
+        SendAPIUtil.sendAPI1(url,reqMap,headerMap,token);
     }
+
     /**
      * @description 设备上传配置信息
      * @param token
@@ -137,6 +152,7 @@ public class DeviceAPIDemo {
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
         SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
+
     /**
      * @description 远程控制设备
      * @param token
@@ -152,6 +168,7 @@ public class DeviceAPIDemo {
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
         SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
+
     /**
      * @description 获取远程控制设备结果
      * @param token
@@ -165,6 +182,12 @@ public class DeviceAPIDemo {
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
         SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
     }
+
+    /**
+     * @description 修改设备固定密码
+     * @param token
+     * @param deviceIdList
+     */
     public static void set_device_access_passwdDevice(String token,List<String> deviceIdList){
         String url ="/device/set_device_access_passwd";
         Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
@@ -172,7 +195,7 @@ public class DeviceAPIDemo {
         reqMap.put("deviceIdList",deviceIdList);
         reqMap.put("passwd","123456");
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
+        SendAPIUtil.sendAPI1(url,reqMap,headerMap,token);
     }
 
 }

@@ -36,7 +36,7 @@ import java.util.Map;
 public class GroupAPIDemo {
 
     public static String token = null;
-    public static int tempId = 619;//创建分组的默认序号
+    public static int tempId = 625;//创建分组的默认序号
 
     public static void main(String[] args) {
         //获取token
@@ -61,17 +61,18 @@ public class GroupAPIDemo {
         Result createGroupResult = new Result();//API的返回结果
         String url ="/group/create";//设置API的相对url
 
-        Map<String,Object> headerMap=new HashMap<>();//创建Header参数map
+        Map<String,Object> HeaderMap=new HashMap<>();//创建Header参数map
         Map<String,Object> reqMap=new HashMap<>(); //创建请求参数map
         reqMap.put("groupId",""+tempId);
         reqMap.put("groupName","group"+tempId++);
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
-        createGroupResult = SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
+        createGroupResult = SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
         if(createGroupResult.getData()!=null){
             return createGroupResult.getData().getGroupId();
         }
         return "数据异常，请查看code代码";
     }
+
     /**
      * @description 更新小组
      * @param token
@@ -81,14 +82,15 @@ public class GroupAPIDemo {
     public static void updateGroup(String token, String groupID) {
         String url ="/group/update";
         //创建Header参数map
-        Map<String,Object> headerMap=new HashMap<>();
+        Map<String,Object> HeaderMap=new HashMap<>();
         //创建请求参数map
         Map<String,Object> reqMap=new HashMap<>();
         reqMap.put("groupId",groupID);
         reqMap.put("groupName","group1062");
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
     }
+
     /**
      * @description 删除小组
      * @param token
@@ -98,13 +100,14 @@ public class GroupAPIDemo {
     public static void delectGroup(String token, List<String> groupIDList) {
         String url ="/group/delete";
         //创建Header参数map
-        Map<String,Object> headerMap=new HashMap<>();
+        Map<String,Object> HeaderMap=new HashMap<>();
         //创建请求参数map
         Map<String,Object> reqMap=new HashMap<>();
         reqMap.put("groupIdList",groupIDList);
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
     }
+
     /**
      * @description 更新小组配置
      * @param token
@@ -114,7 +117,7 @@ public class GroupAPIDemo {
     public static void updateGroupconfig(String token, List<String> groupIDList) {
         String url ="/group/config";
         //创建Header参数map
-        Map<String,Object> headerMap=new HashMap<>();
+        Map<String,Object> HeaderMap=new HashMap<>();
         //创建请求参数map
         Map<String,Object> reqMap=new HashMap<>();
         reqMap.put("groupIdList",groupIDList);
@@ -125,7 +128,7 @@ public class GroupAPIDemo {
         reqMap.put("weekdays",List);
         reqMap.put("openFlag",1);
         //把请求发送给服务器，然后接收返回Result对象并打印到控制台
-        SendAPIUtil.sendAPI(url,reqMap,headerMap,token);
+        SendAPIUtil.sendAPI(url,reqMap,HeaderMap,token);
     }
 
 }

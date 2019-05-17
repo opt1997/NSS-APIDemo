@@ -20,6 +20,15 @@ public class Data {
     private int totalCount;
     private int syncStatus;
     private String noticeId;
+    private List categoryList;
+
+    public List getCategoryList() {
+        return categoryList;
+    }
+
+    public void setCategoryList(List categoryList) {
+        this.categoryList = categoryList;
+    }
 
     public String getNoticeId() {
         return noticeId;

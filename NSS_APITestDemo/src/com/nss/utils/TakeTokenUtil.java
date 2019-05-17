@@ -25,6 +25,16 @@ public class TakeTokenUtil {
         return  doPostforToken(url,map);
 
     }
+
+    public static String getToken1(String clientId,String clientSecret){
+
+        String url = SendAPIUtil.BASE_URL1+"/auth/get_token";
+        Map<String,Object> map=new HashMap<>();
+        map.put("clientId",clientId);
+        map.put("clientSecret",clientSecret);
+        return  doPostforToken(url,map);
+
+    }
     //发送请求获取token字符串
     public static String doPostforToken(String url, Object object) {
         // 获得Http客户端

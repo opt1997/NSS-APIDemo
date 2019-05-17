@@ -1,14 +1,16 @@
-<%@ page import="javax.xml.crypto.Data" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
     <script type="application/javascript">
-
         $(function () {
-           // alert('这里是文件上传');
-            var token = $("#token").val();
-            $('#btn').click(function () {
+            //alert('这里是文件上传');
+            var token = $("#div0").innerText;
+            console.log(token)
+           // var token = 'dcb2b69b-da80-4477-811e-c6628dd0f095';
+            //var token = session.getAttribute("token");
+            var button = $('#btn');
+            button.click(function () {
                 var formData = new FormData($("#upload-form")[0]);
                // console.log(formData);
                 $.ajax({
@@ -26,15 +28,10 @@
                         withCredentials: true
                     },
                     success:function (data) {
-                        var item = eval(data);
-                        for (var i in item) {
-                            if(item[i]=="[object Object]") {
-                                alert("文件id是：\n" + item[i].fileId);
-                                document.getElementById("div1").append("文件id是：\n" + item[i].fileId);
-                            }
-                        }
+                        alert(data);
                     },
                     error:function () {
+                        alert("失败");
                     }
                 });
             });
@@ -48,16 +45,10 @@
         <%= session.getAttribute("token")%>
     </div>
     <br>
-    <%
-        String s1 = session.getAttribute("token").toString();
-    %>
     <form id="upload-form" enctype="multipart/form-data">
         <input name="updateFile" id="updateFile" type="file" />
         <input type="button" id="btn" value="上传">
-        <input id="token" name="token" type= "hidden" value= <%=s1%> />
     </form>
-    <div id="div1">
 
-    </div>
 </body>
 </html>
